@@ -1,0 +1,1041 @@
+* {
+    margin: 0;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: grid;
+    grid-template-areas: "screen gameinfo";
+    grid-gap: 5vw;
+    grid-template-columns: 1fr 1fr;
+}
+
+#screen {
+    position: relative;
+    width: 100vw;
+    height: 56.25vw;
+    overflow: hidden;
+}
+
+
+#game {
+    width: 100%;
+    height: 100%;
+}
+
+
+#game_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/play_game_screen_1.svg);
+    background-size: cover;
+    z-index: -99;
+}
+
+#game_elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+#house_left_container {
+    position: absolute;
+    z-index: 4;
+    top: 14vw;
+    left: 1.5vw;
+
+}
+
+#house_left_sprite {
+    width: 35vw;
+    height: 32vw;
+    background-image: url(images/house_left.svg);
+    background-size: cover;
+}
+
+#house_right_container {
+    position: absolute;
+    z-index: 4;
+    top: 13.8vw;
+    right: 1.4vw;
+
+}
+
+#house_right_sprite {
+    width: 35vw;
+    height: 32vw;
+    background-image: url(images/hus_right.svg);
+    background-size: cover;
+}
+
+#stue_left_container {
+    position: absolute;
+    z-index: 2;
+    top: 35vw;
+    left: 18.5vw;
+
+}
+
+#stue_left_sprite {
+    width: 12.6vw;
+    height: 10.5vw;
+    background-image: url(images/stue_left.svg);
+    background-size: cover;
+}
+
+#stue_right_container {
+    position: absolute;
+    z-index: 2;
+    top: 35.1vw;
+    right: 18.3vw;
+
+
+}
+
+#stue_right_sprite {
+    width: 12.7vw;
+    height: 10.5vw;
+    background-image: url(images/stue_right.svg);
+    background-size: cover;
+}
+
+#kane_container {
+    position: absolute;
+    z-index: 2;
+    top: 23vw;
+    right: 38vw;
+
+}
+
+#kane_sprite {
+    width: 24vw;
+    height: 20vw;
+    background-image: url(images/kane.svg);
+    background-size: cover;
+}
+
+#trees_container {
+    position: absolute;
+    z-index: 1;
+    top: 3vw;
+    right: 5vw;
+
+}
+
+#trees_sprite {
+    width: 100vw;
+    height: 45vw;
+    background-image: url(images/trees.svg);
+    background-size: cover;
+}
+
+#jack_behind_container {
+    position: absolute;
+    z-index: 1;
+    top: 15vw;
+    left: 1vw;
+
+}
+
+#jack_behind_sprite {
+    background-image: url(images/jack_behind.svg);
+    width: 10vw;
+    height: 15vw;
+    background-size: cover;
+}
+
+
+#game_ui {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 33.4%;
+    background-size: cover;
+    z-index: 500;
+}
+
+
+#santas_elf_container1 {
+    z-index: 3;
+    position: absolute;
+}
+
+#santas_elf_sprite1 {
+    background-image: url(images/elf_left.svg);
+    background-size: cover;
+    width: 8vw;
+    height: 10vw;
+
+}
+
+#santas_elf_container2 {
+    z-index: 3;
+    position: absolute;
+}
+
+#santas_elf_sprite2 {
+    background-image: url(images/elf_right.svg);
+    background-size: cover;
+    width: 8vw;
+    height: 10vw;
+}
+
+#jacks_elf_container1 {
+    position: absolute;
+    z-index: 3;
+}
+
+#jacks_elf_sprite1 {
+    background-image: url(images/pumpkin_elf_right.svg);
+    background-size: cover;
+    width: 7vw;
+    height: 9.9vw;
+}
+
+#jacks_elf_container2 {
+    position: absolute;
+    z-index: 3;
+}
+
+#jacks_elf_sprite2 {
+    background-image: url(images/pumpkin_elf_left.svg);
+    background-size: cover;
+    width: 7vw;
+    height: 10vw;
+}
+
+
+#smoke_effect_container {
+    position: absolute;
+    z-index: 6;
+    top: 40vw;
+    right: 29vw;
+
+}
+
+
+#smoke_effect_sprite {
+    background-image: url(images/smoke_effect.svg);
+    background-size: cover;
+    width: 16.2vw;
+    height: 12vw;
+}
+
+
+/* positions*/
+.position1 {
+    top: 35vw;
+    left: 10vw;
+
+}
+
+.position2 {
+    top: 35vw;
+    right: 2vw;
+}
+
+.position3 {
+    top: 35vw;
+    right: 10vw;
+}
+
+.position4 {
+    top: 35vw;
+    left: 2vw;
+}
+
+.hidden {
+    display: none;
+    overflow: hidden;
+}
+
+#game_over {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(images/game_over.svg);
+    background-size: cover;
+    z-index: 99;
+}
+
+#title_game_over {
+    position: absolute;
+    background-image: url(images/game_over_title.svg);
+    top: 10vw;
+    left: 20vw;
+    width: 60vw;
+    height: 10vw;
+    background-size: cover;
+    z-index: 20;
+
+}
+
+
+#crying_pumpkin {
+    position: absolute;
+    background-image: url(images/crying_pumpkin.svg);
+    width: 21.5vw;
+    height: 13vw;
+    z-index: 100;
+    top: 7.5vw;
+    left: 40vw;
+    background-size: cover;
+
+}
+
+#restart_button {
+    position: absolute;
+    background-image: url(images/try_again_button.svg);
+    width: 20vw;
+    height: 15vw;
+    z-index: 110;
+    top: 30vw;
+    left: 40vw;
+    background-size: cover;
+}
+
+
+#title_screen {
+    position: absolute;
+    background-image: url(images/title_screen.svg);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: 400;
+}
+
+#start_game_button {
+    position: absolute;
+    background-image: url(images/start_game_button_1.svg);
+    width: 15vw;
+    height: 12vw;
+    z-index: -300;
+    top: 32.5vw;
+    left: 42vw;
+    background-size: cover;
+}
+
+#title_logo {
+    position: absolute;
+    background-image: url(images/title_logo.svg);
+    width: 34vw;
+    height: 25.2vw;
+    z-index: -300;
+    top: 6vw;
+    left: 33vw;
+    background-size: cover;
+}
+
+#window {
+    position: absolute;
+    background-image: url(images/window_start%20screen.svg);
+    width: 5.5vw;
+    height: 5.8vw;
+    z-index: -300;
+    top: 33.9vw;
+    right: 16.2vw;
+    background-size: cover;
+}
+
+#instructions_button {
+    position: absolute;
+    background-image: url(images/instructions_button.svg);
+    width: 20vw;
+    height: 20vw;
+    z-index: -300;
+    top: 36vw;
+    right: 22vw;
+    background-size: cover;
+}
+
+#instructions {
+    z-index: 550;
+}
+
+#instructions_board {
+    position: absolute;
+    background-image: url(images/instructions_board.svg);
+    width: 71vw;
+    height: 60vw;
+    z-index: 550;
+    top: 0.2vw;
+    right: 15.5vw;
+    background-size: cover;
+}
+
+#back_button {
+    position: absolute;
+    background-image: url(images/back_button.svg);
+    width: 21.5vw;
+    height: 10vw;
+    z-index: 551;
+    top: 42.2vw;
+    right: 15.8vw;
+    background-size: cover;
+}
+
+
+
+
+
+
+#level_complete {
+    position: absolute;
+    background-image: url(images/level_complete_screen.svg);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: 401;
+}
+
+#play_again_button {
+    position: absolute;
+    background-image: url(images/play_again_button.svg);
+    width: 14vw;
+    height: 10.6vw;
+    z-index: -300;
+    top: 37vw;
+    left: 42.8vw;
+    background-size: cover;
+}
+
+#you_won_title {
+    position: absolute;
+    background-image: url(images/you_won_title.svg);
+    width: 30vw;
+    height: 33vw;
+    z-index: -300;
+    top: 2vw;
+    left: 37vw;
+    background-size: cover;
+}
+
+#load_screen {
+    position: absolute;
+    background-image: url(images/level_complete_screen.svg);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    z-index: 401;
+}
+
+#load_button {
+    position: absolute;
+    background-image: url(images/load_button.svg);
+    width: 28.6vw;
+    height: 10vw;
+    z-index: 403;
+    top: 26vw;
+    left: 36vw;
+    background-size: cover;
+}
+
+#load_elf {
+    position: absolute;
+    z-index: 402;
+    top: 19vw;
+    left: 40vw;
+}
+
+#load_elf {
+    background-image: url(images/pumpkin_elf_left.svg);
+    background-size: cover;
+    width: 7vw;
+    height: 10vw;
+}
+
+
+
+
+/*ui element*/
+
+#life_face_1_container {
+    position: absolute;
+    top: 1vw;
+    left: 40vw;
+    z-index: 2;
+}
+
+#life_face_1_sprite {
+    background-image: url(images/life_face_1.svg);
+    background-size: cover;
+    width: 5.4vw;
+    height: 4vw;
+}
+
+#life_face_2_container {
+    position: absolute;
+    top: 1vw;
+    right: 48vw;
+    z-index: 2;
+}
+
+#life_face_2_sprite {
+    background-image: url(images/life_face_2.svg);
+    background-size: cover;
+    width: 5.4vw;
+    height: 4vw;
+}
+
+#life_face_3_container {
+    position: absolute;
+    top: 1vw;
+    right: 40.5vw;
+    z-index: 2;
+}
+
+#life_face_3_sprite {
+    background-image: url(images/life_face_3.svg);
+    background-size: cover;
+    width: 6.7vw;
+    height: 4vw;
+}
+
+#score_board {
+    position: absolute;
+    top: 1vw;
+    right: 8vw;
+    z-index: 2;
+}
+
+#point_dash_container {
+    position: absolute;
+    top: 1vw;
+    right: 3.5vw;
+    z-index: 2;
+}
+
+#point_dash_sprite {
+    background-image: url(images/point_dash.svg);
+    background-size: cover;
+    width: 3vw;
+    height: 5vw;
+}
+
+#point_elf_container {
+    position: absolute;
+    top: 1vw;
+    right: -3.5vw;
+    z-index: 2;
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 3vw;
+    color: rgb(235, 104, 54);
+}
+
+#point_elf_sprite {
+    background-image: url(images/point_elf.svg);
+    background-size: cover;
+    width: 4vw;
+    height: 5.1vw;
+}
+
+#point {
+    position: absolute;
+    right: 6.4vw;
+    z-index: 2;
+    font-family: 'Mountains of Christmas', cursive;
+    font-size: 3.5vw;
+    color: rgb(235, 104, 54);
+}
+
+#twentyfive {
+    position: absolute;
+    top: 2.4vw;
+    right: 1.4vw;
+    z-index: 2;
+    font-size: 3.5vw;
+    color: rgb(235, 104, 54);
+    font-family: 'Mountains of Christmas', cursive;
+}
+
+
+
+#time_moon_1_container {
+    position: absolute;
+    top: 3vw;
+    left: vw;
+}
+
+#time_moon_1_sprite {
+    background-image: url(images/time_moon_big.svg);
+    background-size: cover;
+    width: 9vw;
+    height: 9vw;
+    z-index: -1;
+
+}
+
+
+#music_button_container {
+    position: absolute;
+    top: 16vw;
+    right: 1vw;
+
+}
+
+#music_button_sprite {
+    background-image: url(images/music_button.svg);
+    background-size: cover;
+    width: 3vw;
+    height: 3vw;
+    z-index: 5;
+}
+
+#mute_music_button_container {
+    position: absolute;
+    top: 16vw;
+    right: 1vw;
+
+}
+
+#mute_music_button_sprite {
+    background-image: url(images/mute_music_button.svg);
+    background-size: cover;
+    width: 3vw;
+    height: 3vw;
+    z-index: 5;
+}
+
+#home_button {
+    background-image: url(images/home_button.svg);
+    background-size: cover;
+    width: 3vw;
+    height: 3vw;
+    z-index: -1;
+    position: absolute;
+    top: 12vw;
+    right: 1vw;
+}
+
+#home_button_game_over {
+    background-image: url(images/home_button.svg);
+    background-size: cover;
+    width: 3vw;
+    height: 3vw;
+    z-index: -1;
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+}
+
+#home_button_level_complete {
+    background-image: url(images/home_button.svg);
+    background-size: cover;
+    width: 3vw;
+    height: 3vw;
+    z-index: 450;
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+}
+
+
+
+/*animation*/
+
+.moveRight {
+    animation-name: moveRightkf;
+    animation-duration: 5.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+
+}
+
+@keyframes moveRightkf {
+    0% {
+        transform: translateX(0vw);
+
+    }
+
+    15% {
+        transform: translate(-10vw, 2vw)
+    }
+
+    25% {
+        transform: translate(-16vw, 10vw)
+    }
+
+    37% {
+        transform: translate(-26vw, 10vw)
+    }
+
+    55% {
+        transform: translate(-31vw, -3vw)
+    }
+
+    56% {
+        transform: translate(-31vw, -3vw)
+    }
+
+    70% {
+        transform: translate(-30vw, -13vw)
+    }
+
+    75% {
+        transform: translate(-30vw, -27vw) rotate(-180deg)
+    }
+
+    82% {
+        transform: translate(-30vw, -11vw)rotate(-180deg) scale(0, 1)
+    }
+
+    100% {
+        transform: translate(-30vw, -11vw)rotate(-180deg) scale(0, 1)
+    }
+
+
+}
+
+
+.moveLeft {
+    animation-name: moveLeftkf;
+    animation-duration: 5.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+@keyframes moveLeftkf {
+    0% {
+        transform: translateX(0vw);
+
+    }
+
+    15% {
+        transform: translate(10vw, 2vw)
+    }
+
+    25% {
+        transform: translate(16vw, 10vw)
+    }
+
+    37% {
+        transform: translate(26vw, 10vw)
+    }
+
+    55% {
+        transform: translate(31vw, -3vw)
+    }
+
+    56% {
+        transform: translate(31vw, -3vw)
+    }
+
+    70% {
+        transform: translate(31vw, -13vw)
+    }
+
+    75% {
+        transform: translate(31vw, -27vw) rotate(180deg)
+    }
+
+    82% {
+        transform: translate(31vw, -11vw)rotate(180deg) scale(0, 1)
+    }
+
+    100% {
+        transform: translate(31vw, -11vw)rotate(180deg) scale(0, 1)
+    }
+
+
+}
+
+.moveRight2 {
+    animation-name: moveRight2kf;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+   
+
+}
+
+@keyframes moveRight2kf {
+    0% {
+        transform: translateX(0vw);
+
+    }
+
+    15% {
+        transform: translate(-17vw, 1vw)
+    }
+
+    25% {
+        transform: translate(-20vw, 11vw)
+    }
+
+    43% {
+        transform: translate(-35vw, 11vw)
+    }
+
+    57% {
+        transform: translate(-38vw, -3vw)
+    }
+
+    58% {
+        transform: translate(-38vw, -3vw)
+    }
+
+    73% {
+        transform: translate(-38vw, -13vw)
+    }
+
+    78% {
+        transform: translate(-38vw, -27vw) rotate(-180deg)
+    }
+
+    85% {
+        transform: translate(-38vw, -11vw)rotate(-180deg) scale(0, 1)
+    }
+
+    100% {
+        transform: translate(-38vw, -11vw)rotate(-180deg) scale(0, 1)
+    }
+
+
+}
+
+
+.moveLeft2 {
+    animation-name: moveLeft2kf;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+   
+}
+
+@keyframes moveLeft2kf {
+    0% {
+        transform: translateX(0vw);
+
+    }
+
+    15% {
+        transform: translate(18vw, 1vw)
+    }
+
+    25% {
+        transform: translate(21vw, 10vw)
+    }
+
+    43% {
+        transform: translate(36vw, 10vw)
+    }
+
+    57% {
+        transform: translate(39vw, -3vw)
+    }
+
+    58% {
+        transform: translate(39vw, -3vw)
+    }
+
+    73% {
+        transform: translate(39vw, -13vw)
+    }
+
+    76% {
+        transform: translate(39vw, -27vw) rotate(180deg)
+    }
+
+    82% {
+        transform: translate(39vw, -11vw)rotate(180deg) scale(0, 1)
+    }
+
+    100% {
+        transform: translate(39vw, -11vw)rotate(180deg) scale(0, 1)
+    }
+
+
+}
+
+
+
+.pulse {
+    animation: pulse 2s infinite;
+
+}
+
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1, 1);
+    }
+
+    50% {
+        transform: scale(1.1, 1.1);
+    }
+}
+
+
+.stop {
+    animation-play-state: paused;
+}
+
+/*
+.dissapear {
+    animation-name: dissappear_kf;
+    animation-duration: 0.7s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes dissapear_kf {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0);
+
+    }
+}
+*/
+
+
+.moon {
+    animation-name: time_kf;
+    animation-duration: 45s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+@keyframes time_kf {
+    0% {
+        background-color: #0e255a;
+
+    }
+
+    50% {
+        background-color: #2d4888;
+
+    }
+
+    100% {
+        background-color: #90a5d6;
+    }
+}
+
+
+.shining_moon_1 {
+    animation-name: moon_kf;
+    animation-duration: 45s;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+
+@keyframes moon_kf {
+    100% {
+        transform: translateX(99vw);
+    }
+}
+
+
+
+.shining {
+    animation-name: shining_kf;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes shining_kf {
+    0% {
+        filter: drop-shadow(1px 1px 30px #fadb58);
+    }
+
+    100% {
+        filter: drop-shadow(1px 1px 50px #fadb58);
+    }
+}
+
+.grey {
+    animation-name: greykf;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-duration: 0.1s;
+
+
+}
+
+@keyframes greykf {
+    100% {
+        filter: grayscale(100%) blur(0vw);
+    }
+}
+
+
+.smoke {
+    background-image: url(images/smoke_effect.svg);
+    animation-name: smoke_kf;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    z-index: 400;
+}
+
+@keyframes smoke_kf {
+    0% {
+        transform: scale(0.5);
+    }
+
+    40% {
+        transform: scale(2) rotate(20deg);
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.5) rotate(40deg);
+        opacity: 0;
+    }
+}
+
+.sqaure {
+    animation-name: square_kf;
+    animation-duration: 3.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes square_kf {
+    0% {
+        transform: translateX(0vw);
+    }
+
+    50% {
+        transform: translateX(13vw);
+    }
+
+}
